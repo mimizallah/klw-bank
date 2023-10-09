@@ -31,7 +31,7 @@ export const currentUser = {
   id: 1,
   title: 'Sunday Ishaya',
   img: '/assets/img/profiles/l-1.jpg',
-  date: 'Last seen today 15:24',
+  date: 'Last seen today 00:24',
   role: UserRole.Admin,
 };
 

@@ -211,15 +211,17 @@ const TopNav = ({
             menuButtonClick(e, menuClickCount, containerClassnames)
           }
         >
-          <MenuIcon style={{width: '250px', height: '150px'}} />
+          <i style={{fontSize: '23px', fontColor: '#212120', fontWeight: 'bold'}} className='simple-icon-list d-block'></i>
+
         </NavLink>
         <NavLink
           to="#"
           location={{}}
-          className="menu-button-mobile d-xs-block d-sm-block d-md-none"
+          className="menu-button-mobile d-xs-block d-sm-block d-md-none "
           onClick={(e) => mobileMenuButtonClick(e, containerClassnames)}
         >
-          <MobileMenuIcon />
+          <i style={{fontSize: '23px', fontColor: '#212120', fontWeight: 'bold'}} className='simple-icon-list   d-block'></i> 
+
         </NavLink>
 
         {/* <div className="search">
@@ -237,9 +239,12 @@ const TopNav = ({
           >
             <i className="simple-icon-magnifier" />
           </span>
-        </div> */}
+        </div> */}        
+      </div>
+     
 
-        {/* <div className="d-inline-block">
+      <div className="navbar-right">
+      <div className="d-inline-block">
           <UncontrolledDropdown className="ml-2">
             <DropdownToggle
               caret
@@ -262,20 +267,18 @@ const TopNav = ({
               })}
             </DropdownMenu>
           </UncontrolledDropdown>
-        </div> */}
-      </div>
-     
-
-      <div className="navbar-right">
+        </div>
         {/* {isDarkSwitchActive && <TopnavDarkSwitch />} */}
         <div className="header-icons d-inline-block align-middle">
           <button
-            className="header-icon btn btn-empty d-none d-sm-inline-block"
+            className="header-icon btn btn-empty d-sm-inline-block"
             type="button"
             id=""
           >
-            <i style={{fontSize: '25px'}} className='simple-icon-bubble d-block'></i> 
-
+            <NavLink to="/app/applications/chat">
+              <i style={{fontSize: '23px'}} className='simple-icon-bubble d-block'></i> 
+            </NavLink>
+          
           </button>
           {/* <TopnavEasyAccess />
           <button
@@ -290,7 +293,7 @@ const TopNav = ({
               <i className="simple-icon-size-fullscreen d-block" />
             )}
             </button>*/}
-          <TopnavNotifications /> 
+          <TopnavNotifications style={{fontSize: '23px', fontColor: '#212120', fontWeight: 'bold'}} /> 
 
         </div>
         <div className="user d-inline-block">

@@ -5,7 +5,7 @@ const MenuIcon = () => {
     <>
       <svg
         className="main"
-        xmlns="http://www.w3.org/2000/svg"
+        xmlns="http://www.w3.org/2000/svg" 
         viewBox="0 0 9 17"
       >
         <rect x="0.48" y="0.5" width="7" height="1" />

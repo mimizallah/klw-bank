@@ -14,7 +14,7 @@
   }
 
   .main-menu {
-    background-color: #212120 !important;
+    background-color: #212120;
     width: $main-menu-width;
     height: calc(100% - #{$navbar-height});
     // background: $foreground-color;
@@ -133,7 +133,7 @@
     z-index: 2;
     position: fixed;
     left: $main-menu-width;
-    // border-left: 1px solid $separator-color-light;
+    border-radius: 0px 14px 14px 0px;
     @include depth(2);
     transition: transform $menu-collapse-time;
     height: calc(100% - #{$navbar-height});

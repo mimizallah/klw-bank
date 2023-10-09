@@ -9,10 +9,10 @@ const ContentDefault = React.lazy(() =>
   import(/* webpackChunkName: "dashboard-content" */ './content')
 );
 const AnalyticsDefault = React.lazy(() =>
-  import(/* webpackChunkName: "dashboard-analytics" */ './analytics')
+  import(/* webpackChunkName: "dashboard-analytics" */ './default')
 );
 const EcommerceDefault = React.lazy(() =>
-  import(/* webpackChunkName: "dashboard-ecommerce" */ './ecommerce')
+  import(/* webpackChunkName: "dashboard-ecommerce" */ './default')
 );
 
 const Dashboards = ({ match }) => (

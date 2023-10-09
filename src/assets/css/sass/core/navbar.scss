@@ -158,7 +158,7 @@
     border: initial;
     font-size: 0.8rem;
     color: $secondary-color;
-    padding: 0.6rem 1rem;
+    // padding: 0.6rem 1rem;
 
     @include respond-below(xs) {
       padding-left: 0.75rem;
