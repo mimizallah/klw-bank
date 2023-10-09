@@ -47,7 +47,6 @@
         padding: 0 10px;
         line-height: 14px;
       }
-// #6F6F6F
       a {
         height: $main-menu-item-height;
         display: flex;
@@ -73,9 +72,9 @@
         line-height: 42px;
       }
 
-      // &.active a {
-      //   color: $theme-color-1;
-      // }
+      &.active a {
+        color: #F8F8F8;
+      }
 
       // &.active:after {
       //   content: ' ';
@@ -128,12 +127,12 @@
 
   .sub-menu {
     width: $sub-menu-width;
-    background: #A8A8A8;
-    color: #A8A8A8;
+    background: #F8F8F8;
+    // color: #f8f8f8 !important;
     z-index: 2;
     position: fixed;
     left: $main-menu-width;
-    border-radius: 0px 14px 14px 0px;
+    border-radius: 0px 20px 20px 0px;
     @include depth(2);
     transition: transform $menu-collapse-time;
     height: calc(100% - #{$navbar-height});
