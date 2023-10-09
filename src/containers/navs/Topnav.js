@@ -211,7 +211,7 @@ const TopNav = ({
             menuButtonClick(e, menuClickCount, containerClassnames)
           }
         >
-          <i style={{fontSize: '23px', fontColor: '#212120', fontWeight: 'bold'}} className='simple-icon-list d-block'></i>
+          <i style={{fontSize: '20px', fontColor: '#212120', fontWeight: 'bold'}} className='simple-icon-list d-block'></i>
 
         </NavLink>
         <NavLink
@@ -220,7 +220,7 @@ const TopNav = ({
           className="menu-button-mobile d-xs-block d-sm-block d-md-none "
           onClick={(e) => mobileMenuButtonClick(e, containerClassnames)}
         >
-          <i style={{fontSize: '23px', fontColor: '#212120', fontWeight: 'bold'}} className='simple-icon-list   d-block'></i> 
+          <i style={{fontSize: '20px', fontColor: '#212120', fontWeight: 'bold'}} className='simple-icon-list   d-block'></i> 
 
         </NavLink>
 
@@ -277,7 +277,7 @@ const TopNav = ({
             id=""
           >
             <NavLink to="/app/applications/chat">
-              <i style={{fontSize: '23px'}} className='simple-icon-bubble d-block'></i> 
+              <i style={{fontSize: '20px'}} className='simple-icon-bubble d-block'></i> 
             </NavLink>
           
           </button>
@@ -294,7 +294,7 @@ const TopNav = ({
               <i className="simple-icon-size-fullscreen d-block" />
             )}
             </button>*/}
-          <TopnavNotifications style={{fontSize: '23px', fontColor: '#212120', fontWeight: 'bold'}} /> 
+          <TopnavNotifications style={{fontSize: '20px', fontColor: '#212120', fontWeight: 'bold'}} /> 
 
         </div>
         <div className="user d-inline-block">
