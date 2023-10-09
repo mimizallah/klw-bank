@@ -58,9 +58,9 @@ const Login = ({ history, loading, error, loginUserAction }) => {
         <Card className="auth-card form-content">
           <div className="form-side">
             <NavLink to="/" className="white">
-              <img src={logo} style={{width: '80px'}} />
+              <img src={logo} style={{width: '90px'}} />
             </NavLink>
-            <CardTitle className="text-center text-muted my-4 form text">
+            <CardTitle className="text-center text-muted mt-3 mb-4 form text">
               Log in to your account to continue
             </CardTitle>
 
@@ -76,6 +76,7 @@ const Login = ({ history, loading, error, loginUserAction }) => {
                     <input
                       className="form-control"
                       name="email"
+                      placeholder="Enter email"
                       validate={validateEmail}
                     />
 
@@ -94,6 +95,7 @@ const Login = ({ history, loading, error, loginUserAction }) => {
                       className="form-control"
                       type="password"
                       name="password"
+                      placeholder="Enter password"
                       validate={validatePassword}
                     />
                     <i className='simple-icon-eye eye' />
@@ -104,9 +106,8 @@ const Login = ({ history, loading, error, loginUserAction }) => {
                       </div>
                     )}
                   </FormGroup>
-                    <Button
-                      color="primary"
-                      className={`btn-shadow btn-multiple-state ${
+                    <button
+                      className={`mt-5 btn btn-primary btn-shadow btn-multiple-state ${
                         loading ? 'show-spinner' : ''
                       }`}
                       size="lg"
@@ -119,7 +120,7 @@ const Login = ({ history, loading, error, loginUserAction }) => {
                       <span className="label">
                         <IntlMessages id="user.login-button" />
                       </span>
-                    </Button>
+                    </button>
                 </Form>
               )}
             </Formik>

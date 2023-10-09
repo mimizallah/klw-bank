@@ -71,7 +71,7 @@ class App extends React.Component {
                     component={ViewApp}
                     roles={[UserRole.Admin, UserRole.Editor]}
                   />
-                  <Redirect exact from="/" to="/user/login" />
+                  <Redirect exact from="/" to="/app/dashboards/default" />
 
                   <Route
                     path="/user"
