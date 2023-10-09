@@ -240,11 +240,7 @@ const TopNav = ({
             <i className="simple-icon-magnifier" />
           </span>
         </div> */}        
-      </div>
-     
-
-      <div className="navbar-right">
-      <div className="d-inline-block">
+        <div className="d-inline-block">
           <UncontrolledDropdown className="ml-2">
             <DropdownToggle
               caret
@@ -268,6 +264,11 @@ const TopNav = ({
             </DropdownMenu>
           </UncontrolledDropdown>
         </div>
+      </div>
+     
+
+      <div className="navbar-right">
+      
         {/* {isDarkSwitchActive && <TopnavDarkSwitch />} */}
         <div className="header-icons d-inline-block align-middle">
           <button
