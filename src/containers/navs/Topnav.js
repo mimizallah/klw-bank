@@ -240,7 +240,7 @@ const TopNav = ({
             <i className="simple-icon-magnifier" />
           </span>
         </div> */}        
-        <div className="d-inline-block">
+        {/* <div className="d-inline-block">
           <UncontrolledDropdown className="ml-2">
             <DropdownToggle
               caret
@@ -263,7 +263,7 @@ const TopNav = ({
               })}
             </DropdownMenu>
           </UncontrolledDropdown>
-        </div>
+        </div> */}
       </div>
      
 
