@@ -1,0 +1,145 @@
+div.form-content {
+    display: block;
+    width: 100%;
+    padding: 25px;
+    text-align: center;
+    border-radius: 15px;
+    border: 1px solid #e0e6ed;
+    -webkit-box-shadow: 0 0.1px 0px rgba(0, 0, 0, 0.002), 0 0.2px 0px rgba(0, 0, 0, 0.003), 0 0.4px 0px rgba(0, 0, 0, 0.004), 0 0.6px 0px rgba(0, 0, 0, 0.004), 0 0.9px 0px rgba(0, 0, 0, 0.005), 0 1.2px 0px rgba(0, 0, 0, 0.006), 0 1.8px 0px rgba(0, 0, 0, 0.006), 0 2.6px 0px rgba(0, 0, 0, 0.007), 0 3.9px 0px rgba(0, 0, 0, 0.008), 0 7px 0px rgba(0, 0, 0, 0.01);
+    -moz-box-shadow: 0 0.1px 0px rgba(0, 0, 0, 0.002), 0 0.2px 0px rgba(0, 0, 0, 0.003), 0 0.4px 0px rgba(0, 0, 0, 0.004), 0 0.6px 0px rgba(0, 0, 0, 0.004), 0 0.9px 0px rgba(0, 0, 0, 0.005), 0 1.2px 0px rgba(0, 0, 0, 0.006), 0 1.8px 0px rgba(0, 0, 0, 0.006), 0 2.6px 0px rgba(0, 0, 0, 0.007), 0 3.9px 0px rgba(0, 0, 0, 0.008), 0 7px 0px rgba(0, 0, 0, 0.01);
+    box-shadow: 0 0.1px 0px rgba(0, 0, 0, 0.002), 0 0.2px 0px rgba(0, 0, 0, 0.003), 0 0.4px 0px rgba(0, 0, 0, 0.004), 0 0.6px 0px rgba(0, 0, 0, 0.004), 0 0.9px 0px rgba(0, 0, 0, 0.005), 0 1.2px 0px rgba(0, 0, 0, 0.006), 0 1.8px 0px rgba(0, 0, 0, 0.006), 0 2.6px 0px rgba(0, 0, 0, 0.007), 0 3.9px 0px rgba(0, 0, 0, 0.008), 0 7px 0px rgba(0, 0, 0, 0.01);
+    color: #1b55e2;
+    background: transparent; 
+}
+
+.form-text {
+    font-size: 12px;
+    color: #888ea8;
+    font-weight: 600;
+}
+
+.text-left {
+    width: 100% !important;
+}
+
+.form-side {
+    width: 100% !important;
+    margin: 0px auto;
+    padding: 0;
+}
+
+input {
+    padding: 11px 0px 16px 0;
+    border-bottom: none;
+    position: relative;
+}
+
+.form-form .form-form-wrap form .field-wrapper {
+    width: 100%;
+}
+
+ input {
+    display: inline-block;
+    vertical-align: middle;
+    border-radius: 6px;
+    min-width: 50px;
+    max-width: 635px;
+    width: 100%;
+    -ms-transition: all 0.2s ease-in-out 0s;
+    transition: all 0.2s ease-in-out 0s;
+    color: #3b3f5c;
+    font-weight: 600;
+    font-size: 16px;
+    padding: 13px 35px 13px 46px;
+}
+
+.form-control {
+    height: auto;
+    border: 1px solid #bfc9d4;
+    color: #3b3f5c;
+    font-size: 15px;
+    padding: 8px 10px;
+    letter-spacing: 1px;
+    height: calc(1.4em + 1.4rem + 2px);
+    padding: 0.75rem 1.25rem;
+    border-radius: 6px;
+    line-height: 1.5;
+}
+
+/* input:-internal-autofill-selected {
+    appearance: menulist-button;
+    background-image: none !important;
+    background-color: -internal-light-dark(rgb(232, 240, 254), rgba(70, 90, 126, 0.4)) !important;
+    color: fieldtext !important;
+} */
+
+input[type="email" i] {
+    padding-block: 1px;
+    padding-inline: 2px;
+}
+
+.person, .lock {
+    background-color: blueviolet;
+    /* position: absolute; */
+    /* left: 12px; */
+    /* color: #888ea8; */
+    /* fill: rgba(0, 23, 55, 0.08); */
+    width: 20px; 
+    height: 20px;
+}
+ 
+/* Eye */
+.eye {
+    position: absolute;
+    top: 35px;
+    right: 10px;
+    color: #888ea8;
+    fill: rgba(0, 23, 55, 0.08);
+    width: 17px;
+    font-size: 18px;
+    cursor: pointer;
+}
+
+.eye, .lock, .person {
+    overflow: hidden;
+    vertical-align: middle;
+}
+
+/* BTN */
+.form-form .form-form-wrap form .field-wrapper button.btn {
+    align-self: center;
+    width: 100%;
+    padding: 11px 14px;
+    font-size: 16px;
+    letter-spacing: 2px;
+}
+
+.btn-primary {
+    color: #fff !important;
+    background-color: #1b55e2!important;
+    border-color: #1b55e2;
+    box-shadow: 0 10px 20px -10px #1b55e2;
+}
+
+.btn {
+    padding: 0.4375rem 1.25rem;
+    text-shadow: none;
+    font-family: Verdana;
+    font-weight: normal;
+    white-space: normal;
+    word-wrap: break-word;
+    transition: .2s ease-out;
+    touch-action: manipulation;
+    cursor: pointer;
+    background-color: #f1f2f3;
+    box-shadow: 0px 5px 20px 0 rgba(0, 0, 0, 0.1);
+    will-change: opacity, transform;
+    transition: all 0.3s ease-out;
+    -webkit-transition: all 0.3s ease-out;
+}
+
+@media (max-width: 991px){
+    .form-form .form-container .form-content {
+        border-radius: 15px;
+    }
+}

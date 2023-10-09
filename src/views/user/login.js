@@ -9,6 +9,8 @@ import { NotificationManager } from '../../components/common/react-notifications
 import { loginUser } from '../../redux/actions';
 import { Colxx } from '../../components/common/CustomBootstrap';
 import IntlMessages from '../../helpers/IntlMessages';
+import logo from '../../assets/logos/white.svg'
+import './Loggin.css'
 
 const validatePassword = (value) => {
   let error;
@@ -52,40 +54,31 @@ const Login = ({ history, loading, error, loginUserAction }) => {
 
   return (
     <Row className="h-100">
-      <Colxx xxs="12" md="10" className="mx-auto my-auto">
-        <Card className="auth-card">
-          <div className="position-relative image-side ">
-            <p className="text-white h2">MAGIC IS IN THE DETAILS</p>
-            <p className="white mb-0">
-              Please use your credentials to login.
-              <br />
-              If you are not a member, please{' '}
-              <NavLink to="/user/register" className="white">
-                register
-              </NavLink>
-              .
-            </p> 
-          </div>
+      <Colxx xxs="12" md="6" className="mx-auto my-auto">
+        <Card className="auth-card form-content">
           <div className="form-side">
             <NavLink to="/" className="white">
-              <span className="logo-single" />
+              <img src={logo} style={{width: '80px'}} />
             </NavLink>
-            <CardTitle className="mb-4">
-              <IntlMessages id="user.login-title" />
+            <CardTitle className="text-center text-muted my-4 form text">
+              Log in to your account to continue
             </CardTitle>
 
             <Formik initialValues={initialValues} onSubmit={onUserLogin}>
               {({ errors, touched }) => (
-                <Form className="av-tooltip tooltip-label-bottom">
+                <Form style={{border: '2px solid yellow'}} className="av-tooltip tooltip-label-bottom text-left">
                   <FormGroup className="form-group has-float-label">
-                    <Label>
+                    {/* <Label>
                       <IntlMessages id="user.email" />
-                    </Label>
-                    <Field
+                    </Label> */}
+                    <i className='simple-icon-user person' />
+
+                    <input
                       className="form-control"
                       name="email"
                       validate={validateEmail}
                     />
+
                     {errors.email && touched.email && (
                       <div className="invalid-feedback d-block">
                         {errors.email}
@@ -93,25 +86,24 @@ const Login = ({ history, loading, error, loginUserAction }) => {
                     )}
                   </FormGroup>
                   <FormGroup className="form-group has-float-label">
-                    <Label>
+                    {/* <Label>
                       <IntlMessages id="user.password" />
-                    </Label>
-                    <Field
+                    </Label> */}
+                    <i className='simple-icon-lock lock' />
+                    <input
                       className="form-control"
                       type="password"
                       name="password"
                       validate={validatePassword}
                     />
+                    <i className='simple-icon-eye eye' />
+
                     {errors.password && touched.password && (
                       <div className="invalid-feedback d-block">
                         {errors.password}
                       </div>
                     )}
                   </FormGroup>
-                  <div className="d-flex justify-content-between align-items-center">
-                    <NavLink to="/user/forgot-password">
-                      <IntlMessages id="user.forgot-password-question" />
-                    </NavLink>
                     <Button
                       color="primary"
                       className={`btn-shadow btn-multiple-state ${
@@ -128,7 +120,6 @@ const Login = ({ history, loading, error, loginUserAction }) => {
                         <IntlMessages id="user.login-button" />
                       </span>
                     </Button>
-                  </div>
                 </Form>
               )}
             </Formik>
