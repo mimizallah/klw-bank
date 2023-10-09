@@ -64,7 +64,7 @@ const Login = ({ history, loading, error, loginUserAction }) => {
                 register
               </NavLink>
               .
-            </p>
+            </p> 
           </div>
           <div className="form-side">
             <NavLink to="/" className="white">

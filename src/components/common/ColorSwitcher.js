@@ -144,17 +144,7 @@ const ColorSwitcher = () => {
         </FormGroup>
       </div>
 
-      <a
-        href="#section"
-        className="theme-button"
-        onClick={(e) => {
-          e.preventDefault();
-          setIsOpen(!isOpen);
-        }}
-      >
-        {' '}
-        <i className="simple-icon-magic-wand" />{' '}
-      </a>
+      // The hanging color picker was here
     </div>
   );
 };

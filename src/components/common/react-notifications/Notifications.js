@@ -7,7 +7,7 @@ import Notification from './Notification';
 
 class Notifications extends React.Component {
   handleRequestHide = (notification) => () => {
-    const { onRequestHide } = this.props;
+    const { onRequestHide } = this.props; 
     if (onRequestHide) {
       onRequestHide(notification);
     }
