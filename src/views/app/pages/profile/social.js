@@ -39,38 +39,8 @@ const ProfileSocial = ({ match }) => {
   return (
     <>
       <Row>
-        <Colxx xxs="12">
-          <h1>Sarah Kortney </h1>
-          <div className="text-zero top-right-button-container">
-            <UncontrolledDropdown>
-              <DropdownToggle
-                caret
-                color="primary"
-                size="lg"
-                outline
-                className="top-right-button top-right-button-single"
-              >
-                <IntlMessages id="pages.actions" />
-              </DropdownToggle>
-              <DropdownMenu>
-                <DropdownItem header>
-                  <IntlMessages id="pages.header" />
-                </DropdownItem>
-                <DropdownItem disabled>
-                  <IntlMessages id="pages.delete" />
-                </DropdownItem>
-                <DropdownItem>
-                  <IntlMessages id="pages.another-action" />
-                </DropdownItem>
-                <DropdownItem divider />
-                <DropdownItem>
-                  <IntlMessages id="pages.another-action" />
-                </DropdownItem>
-              </DropdownMenu>
-            </UncontrolledDropdown>
-          </div>
-
-          <Breadcrumb match={match} />
+        <Colxx xxs="12 mt-3">
+          <h1>Sunday Ishaya </h1>
 
           <Nav tabs className="separator-tabs ml-0 mb-5">
             <NavItem>
@@ -86,70 +56,42 @@ const ProfileSocial = ({ match }) => {
                 <IntlMessages id="pages.profile" />
               </NavLink>
             </NavItem>
-            <NavItem>
-              <NavLink
-                className={classnames({
-                  active: activeTab === 'images',
-                  'nav-link': true,
-                })}
-                onClick={() => setActiveTab('images')}
-                to="#"
-                location={{}}
-              >
-                <IntlMessages id="pages.images" />
-              </NavLink>
-            </NavItem>
-            <NavItem>
-              <NavLink
-                className={classnames({
-                  active: activeTab === 'friends',
-                  'nav-link': true,
-                })}
-                onClick={() => setActiveTab('friends')}
-                to="#"
-                location={{}}
-              >
-                <IntlMessages id="pages.friends" />
-              </NavLink>
-            </NavItem>
+            
           </Nav>
 
           <TabContent activeTab={activeTab}>
             <TabPane tabId="profile">
               <Row>
-                <Colxx xxs="12" className="mb-5">
-                  <Card>
+                <Colxx xxs="12" className="my-5">
+                  {/* <Card>
                     <SingleLightbox
                       thumb="/assets/img/social/header.jpg"
                       large="/assets/img/social/header.jpg"
                       className="social-header card-img"
                     />
-                  </Card>
+                  </Card> */}
                 </Colxx>
-                <Colxx xxs="12" lg="5" xl="4" className="col-left">
+                <Colxx xxs="12" lg="5" xl="6" className="col-left">
                   <SingleLightbox
                     thumb="/assets/img/profiles/l-1.jpg"
-                    large="/assets/img/profiles/1.jpg"
+                    large="/assets/img/profiles/l-1.jpg"
                     className="img-thumbnail card-img social-profile-img"
                   />
 
                   <Card className="mb-4">
                     <CardBody>
                       <div className="text-center pt-4">
-                        <p className="list-item-heading pt-2">Sarah Cortney</p>
+                        <p className="list-item-heading pt-2">Sunday Ishaya</p>
                       </div>
                       <p className="mb-3">
                         I’m a web developer. I spend my whole day, practically
                         every day, experimenting with HTML, CSS, and JavaScript;
-                        dabbling with Python and Ruby; and inhaling a wide
-                        variety of potentially useless information through a few
-                        hundred RSS feeds. I build websites that delight and
-                        inform. I do it well.
+                        dabbling with Python and Ruby.
                       </p>
                       <p className="text-muted text-small mb-2">
                         <IntlMessages id="pages.location" />
                       </p>
-                      <p className="mb-3">Nairobi, Kenya</p>
+                      <p className="mb-3">FCT, Nigeria</p>
                       <p className="text-muted text-small mb-2">
                         <IntlMessages id="pages.responsibilities" />
                       </p>
@@ -208,81 +150,18 @@ const ProfileSocial = ({ match }) => {
                     </CardBody>
                   </Card>
 
-                  <Card className="mb-4">
+              </Colxx>
+              <Colxx xxs="12" lg="5" xl="6" className="col-left">
+                <Card className="mb-4">
                     <CardBody>
                       <CardTitle>
-                        <IntlMessages id="pages.similar-projects" />
+                        Update Your Profile
                       </CardTitle>
-                      <GalleryDetail />
+                      <hr />
+                      Update form
                     </CardBody>
                   </Card>
-
-                  <Card className="mb-4">
-                    <CardBody>
-                      <CardTitle>
-                        <IntlMessages id="pages.who-to-follow" />
-                      </CardTitle>
-                      <div className="remove-last-border remove-last-margin remove-last-padding">
-                        {followData.map((itemData) => {
-                          return (
-                            <UserFollow
-                              data={itemData}
-                              key={`follow_${itemData.key}`}
-                            />
-                          );
-                        })}
-                      </div>
-                    </CardBody>
-                  </Card>
-
-                  <Card className="mb-4">
-                    <CardBody>
-                      <CardTitle>
-                        <IntlMessages id="pages.recent-posts" />
-                      </CardTitle>
-                      <div className="remove-last-border remove-last-margin remove-last-padding">
-                        {recentPostsData.map((itemData) => {
-                          return (
-                            <RecentPost
-                              data={itemData}
-                              key={`recent_${itemData.key}`}
-                            />
-                          );
-                        })}
-                      </div>
-                    </CardBody>
-                  </Card>
-                </Colxx>
-                <Colxx xxs="12" lg="7" xl="8" className="col-right">
-                  {posts.map((itemData) => {
-                    return (
-                      <Post
-                        data={itemData}
-                        key={`post_${itemData.key}`}
-                        className="mb-4"
-                      />
-                    );
-                  })}
-                </Colxx>
-              </Row>
-            </TabPane>
-            <TabPane tabId="images">
-              <GalleryProfile />
-            </TabPane>
-            <TabPane tabId="friends">
-              <Row>
-                {friendsData.map((itemData) => {
-                  return (
-                    <Colxx
-                      xxs="12"
-                      md="6"
-                      lg="4"
-                      key={`friend_${itemData.key}`}
-                    >
-                      <UserCardBasic data={itemData} />
-                    </Colxx>
-                  );
-                })}
+              </Colxx>
               </Row>
             </TabPane>
           </TabContent>

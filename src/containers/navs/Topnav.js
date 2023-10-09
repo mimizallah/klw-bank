@@ -270,7 +270,7 @@ const TopNav = ({
       <div className="navbar-right">
       
         {/* {isDarkSwitchActive && <TopnavDarkSwitch />} */}
-        <div className="header-icons d-inline-block align-middle mr-2">
+        <div className="header-icons d-inline-block align-middle">
           <button
             className="header-icon btn btn-empty d-sm-inline-block"
             type="button"
@@ -294,7 +294,7 @@ const TopNav = ({
               <i className="simple-icon-size-fullscreen d-block" />
             )}
             </button>*/}
-          <TopnavNotifications style={{fontSize: '20px', fontColor: '#212120', fontWeight: 'bold'}} /> 
+          <TopnavNotifications /> 
 
         </div>
         <div className="user d-inline-block">
@@ -306,7 +306,9 @@ const TopNav = ({
               </span>
             </DropdownToggle>
             <DropdownMenu className="mt-3" right>
-              <DropdownItem>My Profile</DropdownItem>
+              <DropdownItem>
+                <NavLink to="/app/pages/profile/social">My Profile</NavLink>
+              </DropdownItem>
               <DropdownItem>Settings</DropdownItem>
               <DropdownItem>Support</DropdownItem>
               <DropdownItem divider />

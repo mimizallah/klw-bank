@@ -32,7 +32,7 @@ const NotificationItem = ({ img, title, date }) => {
 
 const TopnavNotifications = () => {
   return (
-    <div className="position-relative d-inline-block">
+    <div className="position-relative d-inline-block" style={{fontSize: '5px', fontColor: '#212120', fontWeight: 'bold'}}>
       <UncontrolledDropdown className="dropdown-menu-right">
         <DropdownToggle
           className="header-icon notificationButton"
