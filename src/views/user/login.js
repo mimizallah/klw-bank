@@ -10,7 +10,12 @@ import { loginUser } from '../../redux/actions';
 import { Colxx } from '../../components/common/CustomBootstrap';
 import IntlMessages from '../../helpers/IntlMessages';
 import logo from '../../assets/logos/white.svg'
-import './Loggin.css'
+import './Loggin.css';
+import { FiUser } from "react-icons/fi";
+import { FiLock } from "react-icons/fi";
+import { FiEye } from "react-icons/fi";
+import { FiEyeOff } from "react-icons/fi";
+
 
 const validatePassword = (value) => {
   let error;
@@ -35,6 +40,7 @@ const validateEmail = (value) => {
 const Login = ({ history, loading, error, loginUserAction }) => {
   const [email] = useState('demo@gogo.com');
   const [password] = useState('gogo123');
+  const [visib, setVisib] = useState(true);
 
   useEffect(() => {
     if (error) {
@@ -60,23 +66,22 @@ const Login = ({ history, loading, error, loginUserAction }) => {
             <NavLink to="/" className="white">
               <img src={logo} style={{width: '90px'}} />
             </NavLink>
-            <CardTitle className="text-center text-muted mt-3 mb-4 form text">
+            <CardTitle className="text-center text-muted mt-3 mb-5 form text">
               Log in to your account to continue
             </CardTitle>
 
             <Formik initialValues={initialValues} onSubmit={onUserLogin}>
               {({ errors, touched }) => (
-                <Form style={{border: '2px solid yellow'}} className="av-tooltip tooltip-label-bottom text-left">
+                <Form className="av-tooltip tooltip-label-bottom text-left">
                   <FormGroup className="form-group has-float-label">
-                    {/* <Label>
-                      <IntlMessages id="user.email" />
-                    </Label> */}
-                    <i className='simple-icon-user person' />
-
+                    <Label>
+                      <IntlMessages id="Enter your email" />
+                    </Label>
+                    <FiUser className='simple-icon-user person' />
                     <input
-                      className="form-control"
+                      type="email"
+                      className="form-control first mb-5"
                       name="email"
-                      placeholder="Enter email"
                       validate={validateEmail}
                     />
 
@@ -87,18 +92,18 @@ const Login = ({ history, loading, error, loginUserAction }) => {
                     )}
                   </FormGroup>
                   <FormGroup className="form-group has-float-label">
-                    {/* <Label>
-                      <IntlMessages id="user.password" />
-                    </Label> */}
-                    <i className='simple-icon-lock lock' />
+                    <Label>
+                      <IntlMessages id="Enter your password" />
+                    </Label>
+                    <FiLock className='simple-icon-lock lock' />
+
                     <input
-                      className="form-control"
-                      type="password"
+                      className="form-control second"
+                      type={ visib ? 'password' : 'text'}
                       name="password"
-                      placeholder="Enter password"
                       validate={validatePassword}
                     />
-                    <i className='simple-icon-eye eye' />
+                    {visib ? <FiEyeOff className='simple-icon-eye eye' onClick={() => setVisib(false)} /> : <FiEye className='simple-icon-eye eye' onClick={() => setVisib(true)} />}
 
                     {errors.password && touched.password && (
                       <div className="invalid-feedback d-block">
@@ -107,7 +112,8 @@ const Login = ({ history, loading, error, loginUserAction }) => {
                     )}
                   </FormGroup>
                     <button
-                      className={`mt-5 btn btn-primary btn-shadow btn-multiple-state ${
+                      id='butt'
+                      className={`mt-4 btn btn-primary btn-shadow btn-multiple-state ${
                         loading ? 'show-spinner' : ''
                       }`}
                       size="lg"
@@ -118,7 +124,7 @@ const Login = ({ history, loading, error, loginUserAction }) => {
                         <span className="bounce3" />
                       </span>
                       <span className="label">
-                        <IntlMessages id="user.login-button" />
+                        <IntlMessages id="Log In" />
                       </span>
                     </button>
                 </Form>

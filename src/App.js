@@ -49,7 +49,7 @@ class App extends React.Component {
       document.body.classList.remove('rtl');
     }
   }
-
+ 
   render() {
     const { locale } = this.props;
     const currentAppLocale = AppLocale[locale];
@@ -62,7 +62,6 @@ class App extends React.Component {
         >
           <>
             <NotificationContainer />
-            // {isMultiColorActive && <ColorSwitcher />}
             <Suspense fallback={<div className="loading" />}>
               <Router>
                 <Switch>
@@ -71,7 +70,7 @@ class App extends React.Component {
                     component={ViewApp}
                     roles={[UserRole.Admin, UserRole.Editor]}
                   />
-                  <Redirect exact from="/" to="/app/dashboards/default" />
+                  <Redirect exact from="/" to="/user/login" />
 
                   <Route
                     path="/user"
