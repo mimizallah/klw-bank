@@ -315,14 +315,13 @@ const TopNav = ({
             <DropdownMenu className="mt-3" right>
               <div className="user-profile-section">
                 <div className="media mx-auto">
-                  <img className="img-fluid mr-2" alt="Profile" src="/assets/img/profiles/l-1.jpg" />
+                  <img className="img-fluid mr-4" alt="Profile" src="/assets/img/profiles/l-1.jpg" />
                   <div>
                     <h5>Admin</h5>
                     <p>Admin</p>
                   </div>
                 </div>
               </div>
-            <DropdownItem divider />
               <DropdownItem className='drop'>
                 <NavLink to="/app/pages/profile/social"><FiUser className="grn" /> My Profile</NavLink>
               </DropdownItem>

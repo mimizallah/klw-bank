@@ -21,7 +21,7 @@
     cursor: default;
   }
 
-  border-radius: calc(0.15rem - 1px);
+  border-radius: 10px;
   @include depth(1);
 
   .card-body {

@@ -63,10 +63,8 @@ input:focus {
     border: 1px solid #bfc9d4;
     color: #3b3f5c;
     font-size: 15px;
-    /* padding: 8px 0px; */
     letter-spacing: 1px;
     height: calc(1.4em + 1.4rem + 2px);
-    /* padding: 0.75rem 1.25rem; */
     border-radius: 6px;
     line-height: 1.5;
 }
@@ -79,13 +77,6 @@ input:focus {
     padding: 0.75rem 1.72rem;
 }
 
-/* input:-internal-autofill-selected {
-    appearance: menulist-button;
-    background-image: none !important;
-    background-color: -internal-light-dark(rgb(232, 240, 254), rgba(70, 90, 126, 0.4)) !important;
-    color: fieldtext !important;
-} */
-
 .form-control {
     background: #E8F0FE !important;
 }
@@ -93,11 +84,6 @@ input:focus {
 input.form-control::placeholder, input.form-control::-ms-input-placeholder {
     font-size: 11px;
 }
-
-/* input[type="email" i] {
-    padding-block: 1px;
-    padding-inline: 2px;
-} */
 
 .lock, .person {
     position: absolute;
@@ -110,7 +96,6 @@ input.form-control::placeholder, input.form-control::-ms-input-placeholder {
     height: 20px;
 }
  
-/* Eye */
 .eye {
     position: absolute;
     top: 13px;
@@ -127,7 +112,7 @@ input.form-control::placeholder, input.form-control::-ms-input-placeholder {
     vertical-align: middle;
 }
 
-/* BTN */
+
 #butt {
     align-self: center;
     width: 100%;
