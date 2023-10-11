@@ -1,0 +1,2 @@
+(this["webpackJsonpklw-bank"]=this["webpackJsonpklw-bank"]||[]).push([[336],{2216:function(c,i,d){"use strict";d.r(i),d.d(i,"default",(function(){return a}));var a="data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHhtbDpzcGFjZT0icHJlc2VydmUiIHdpZHRoPSIyNTYiIGhlaWdodD0iMjU2IiBzdHlsZT0iZmlsbC1ydWxlOmV2ZW5vZGQ7Y2xpcC1ydWxlOmV2ZW5vZGQ7c3Ryb2tlLWxpbmVqb2luOnJvdW5kO3N0cm9rZS1taXRlcmxpbWl0OjIiPjxjaXJjbGUgY3g9IjEyOCIgY3k9IjEyOCIgcj0iMTIxIi8+PC9zdmc+"}}]);
+//# sourceMappingURL=336.02280656.chunk.js.map
