@@ -36,6 +36,13 @@ import TopnavNotifications from './Topnav.Notifications';
 import TopnavDarkSwitch from './Topnav.DarkSwitch';
 
 import { getDirection, setDirection } from '../../helpers/Utils';
+import { FiLogOut } from "react-icons/fi";
+import { FiUser } from "react-icons/fi";
+import { FiSettings } from "react-icons/fi";
+import { FiHelpCircle } from "react-icons/fi";
+
+
+
 
 const TopNav = ({
   intl,
@@ -306,13 +313,24 @@ const TopNav = ({
               </span>
             </DropdownToggle>
             <DropdownMenu className="mt-3" right>
-              <DropdownItem>
-                <NavLink to="/app/pages/profile/social">My Profile</NavLink>
+              <div className="user-profile-section">
+                <div className="media mx-auto">
+                  <img className="img-fluid mr-2" alt="Profile" src="/assets/img/profiles/l-1.jpg" />
+                  <div>
+                    <h5>Admin</h5>
+                    <p>Admin</p>
+                  </div>
+                </div>
+              </div>
+            <DropdownItem divider />
+              <DropdownItem className='drop'>
+                <NavLink to="/app/pages/profile/social"><FiUser className="grn" /> My Profile</NavLink>
               </DropdownItem>
-              <DropdownItem>Settings</DropdownItem>
-              <DropdownItem>Support</DropdownItem>
+              <DropdownItem className='drop'><FiSettings className="blb" /> Settings</DropdownItem>
+              <DropdownItem className='drop'><FiHelpCircle className="or" /> Support</DropdownItem>
               <DropdownItem divider />
-              <DropdownItem onClick={() => handleLogout()}>
+              <DropdownItem className='drop' onClick={() => handleLogout()}>
+                <FiLogOut className="rd" /> 
                 Sign out
               </DropdownItem>
             </DropdownMenu>
